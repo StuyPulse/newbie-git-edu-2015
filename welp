@@ -1,0 +1,9 @@
+public class Rubin
+	public static void main(String[] args){
+		System.out.print("why tho");
+
+
+
+
+
+}
