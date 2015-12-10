@@ -1,0 +1,15 @@
+
+
+public class drivetrain
+	private String frontLeftMotor;
+	private String frontRightMotor;	
+	private String rearLeftMotor;
+	private String rearRightMotor;
+	
+
+	public Drivetrain() {
+		frontLeftMotor = new String(1);
+		frontRightMotor = new String(2);
+		rearLeftMotor = new String(3);
+		rearRightMotor = new String(4);
+	}
