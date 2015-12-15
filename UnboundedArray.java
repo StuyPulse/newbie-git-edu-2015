@@ -43,4 +43,19 @@ class UnboundedArray {
 		}
 		
 	}
+
+	public void sort() {
+		int placeholder1;
+		int placeholder2;
+		for (int k = 0; k < array.length * array.length; k++){	
+			for (int i = 0; i < array.length; i++){
+				placeholder1 = array[i];
+				placeholder2 = array[i++];
+				if (placeholder1 > placeholder2) {
+					array[i] = placeholder2;
+					array[i++] = placeholder1;
+				};
+			}
+		}
+	}
 }
