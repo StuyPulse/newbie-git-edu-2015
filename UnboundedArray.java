@@ -8,7 +8,7 @@ class UnboundedArray {
 
 	private Object[] array = new array[0];
 	private int length = 0;
-
+	private int indexToRemove = 0;
 	
 	private Object[] toNewArray (Object[] oldArray, int length) {
 		/*
