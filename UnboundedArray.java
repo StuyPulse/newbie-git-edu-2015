@@ -27,7 +27,10 @@ class UnboundedArray {
 		return newArray;
 	}
 	
-	
+	public void remove(indexToRemove) {
+		Object[index] = null;
+		toNewArray(Object[], length);
+	}
 	
 	public void add(Object o, int index) {
 		if (index >= length) {
