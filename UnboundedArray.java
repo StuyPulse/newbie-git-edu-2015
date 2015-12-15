@@ -6,7 +6,7 @@ class UnboundedArray {
 *
 */
 
-	private Object[] array = new array[1];
+	private Object[] array = new Object[1];
 	private int length = 0;
 	private int indexToRemove = 0;
 
@@ -23,34 +23,46 @@ class UnboundedArray {
 				newArray[i] = oldArray[i];
 			}
 		}
-
 		return newArray;
 	}
-	public void remove(indexToRemove) {
+	public void remove(int indexToRemove) {
 		array[indexToRemove] = null;
-		toNewArray(array[], length);
+		toNewArray(array, length);
 	}
 
 	public void add(Object o, int index) {
 		if (index >= length) {
-			array = toNewArray(array, length);
+			array = toNewArray(array, length + 1);
 			// Set to length, because length is 1 greater than the maximum value.
 			array[length] = o;
 			length++;
 		}else {
-			array[index] = object;
+			array[index] = o;
 		}
 		
 	}
+	
+	public void append(Object o) {
+		add(o, array.length);
+	
+	}
+	
+	public int size() {
+		return array.length;
+	}
+	
+	public Object get(int index) {
+		return array[index];
+	}
 
 	public void sort() {
-		int placeholder1;
-		int placeholder2;
+		Object placeholder1;
+		Object placeholder2;
 		for (int k = 0; k < array.length * array.length; k++){	
 			for (int i = 0; i < array.length; i++){
 				placeholder1 = array[i];
 				placeholder2 = array[i++];
-				if (placeholder1 > placeholder2) {
+				if ((float)placeholder1 > (float)placeholder2) {
 					array[i] = placeholder2;
 					array[i++] = placeholder1;
 				};
