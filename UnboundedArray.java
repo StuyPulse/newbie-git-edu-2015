@@ -26,17 +26,20 @@ class UnboundedArray {
 		
 		return newArray;
 	}
-	
 	public void remove(indexToRemove) {
 		Object[index] = null;
 		toNewArray(Object[], length);
 	}
 	
+	
 	public void add(Object o, int index) {
 		if (index >= length) {
-			array = t
+			array = toNewArray(array, length);
+			// Set to length, because length is 1 greater than the maximum value.
+			array[length] = o;
+			length++;
 		}else {
-		
+			array[index] = object;
 		}
 		
 	}
