@@ -27,8 +27,8 @@ class UnboundedArray {
 		return newArray;
 	}
 	public void remove(indexToRemove) {
-		Object[index] = null;
-		toNewArray(Object[], length);
+		array[indexToRemove] = null;
+		toNewArray(array[], length);
 	}
 	
 	
