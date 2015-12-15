@@ -1,8 +1,0 @@
-public class Lift {
-       private CANTalon liftthing;
-       public Lift() {
-       	      liftthing = new liftthing(3)
-	      }      	      
-	      public void 
-	      // unfinished
-}
