@@ -6,32 +6,31 @@ class UnboundedArray {
 *
 */
 
-	private Object[] array = new array[0];
+	private Object[] array = new array[1];
 	private int length = 0;
 	private int indexToRemove = 0;
-	
+
 	private Object[] toNewArray (Object[] oldArray, int length) {
 		/*
 		 For pushing an array into a new array of a different size.
 		 This is used for either adding a new element to the array, OR
 		 decreasing the size
 		*/
-		
+
 		Object[] newArray = new Object[length];
 		for(int i = 0; i < oldArray.length; i++) {
 			if (oldArray[i] != null) { // This cuts off, for decreasing the size of array.
 				newArray[i] = oldArray[i];
 			}
 		}
-		
+
 		return newArray;
 	}
 	public void remove(indexToRemove) {
 		array[indexToRemove] = null;
 		toNewArray(array[], length);
 	}
-	
-	
+
 	public void add(Object o, int index) {
 		if (index >= length) {
 			array = toNewArray(array, length);
