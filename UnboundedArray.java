@@ -39,18 +39,18 @@ class UnboundedArray {
 		}else {
 			array[index] = o;
 		}
-		
-	}
 	
+	}
+
 	public void append(Object o) {
 		add(o, array.length);
 	
 	}
-	
+
 	public int size() {
 		return array.length;
 	}
-	
+
 	public Object get(int index) {
 		return array[index];
 	}

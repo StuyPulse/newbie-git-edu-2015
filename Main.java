@@ -11,6 +11,4 @@ class Main {
 		for(int i = 0; i < uArray.size(); i++) 
 			System.out.println(uArray.get(i));
 	}
-
-
 }
