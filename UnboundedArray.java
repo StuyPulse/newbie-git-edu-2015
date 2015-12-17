@@ -25,9 +25,25 @@ class UnboundedArray {
 		}
 		return newArray;
 	}
-	public void remove(int indexToRemove) {
-		array[indexToRemove] = null;
-		toNewArray(array, length);
+	
+	private Object[] compressArray (Object[] oldArray) {
+		// Removes nulls and fits array. (Shifts over to replacen nulls)
+		Object[] newArray = new Object[oldArray.length];
+		int index = 0; // This keeps track of what index in newArray we are in
+		for(int i = 0; i < oldArray.length; i++) {
+			if (oldArray[i] != null) {
+				newArray[index] = i;
+				index++;
+			}
+	
+		}
+		return newArray;
+	}
+	
+	public void remove(int index) {
+		array[index] = null;
+		array = compressArray(array);
+		array = toNewArray(array, length - 1);
 	}
 
 	public void add(Object o, int index) {
@@ -44,7 +60,6 @@ class UnboundedArray {
 
 	public void append(Object o) {
 		add(o, array.length);
-	
 	}
 
 	public int size() {
@@ -55,7 +70,7 @@ class UnboundedArray {
 		return array[index];
 	}
 
-	public void sort() {
+	/*public void sort() {
 		Object placeholder1;
 		Object placeholder2;
 		for (int k = 0; k < array.length * array.length; k++){	
@@ -68,5 +83,5 @@ class UnboundedArray {
 				};
 			}
 		}
-	}
+	}*/
 }
