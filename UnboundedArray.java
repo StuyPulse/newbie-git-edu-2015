@@ -70,18 +70,24 @@ class UnboundedArray {
 		return array[index];
 	}
 
-	/*public void sort() {
+	public void reverse () {
 		Object placeholder1;
-		Object placeholder2;
-		for (int k = 0; k < array.length * array.length; k++){	
-			for (int i = 0; i < array.length; i++){
+		Object placeholder2;{
+		if (array.length % 2 == 0)
+			{for (int i = 0; i < array.length / 2;){
 				placeholder1 = array[i];
-				placeholder2 = array[i++];
-				if ((float)placeholder1 > (float)placeholder2) {
-					array[i] = placeholder2;
-					array[i++] = placeholder1;
-				};
+				placeholder2 = array[array.length - i];
+				array[i] = placeholder2;
+				array[array.length - i] = placeholder1;
+				i++;}
+				}
+		else {for (int i = 0; i < (array.length / 2 + 1);){
+				placeholder1 = array[i];
+				placeholder2 = array[array.length - i];
+				array[i] = placeholder2;
+				array[array.length - i] = placeholder1;
+				i++;}
 			}
 		}
-	}*/
+	}
 }
